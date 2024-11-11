@@ -1,0 +1,329 @@
+
+R version 4.4.2 (2024-10-31 ucrt) -- "Pile of Leaves"
+Copyright (C) 2024 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> 2 + 5
+[1] 7
+> a<-3
+> a
+[1] 3
+> b=8
+> b
+[1] 8
+> x=c(1,2,3,4,5);mean(x)
+[1] 3
+> x=1
+> y=2
+> z=x>y
+> print(z)
+[1] FALSE
+> class(z)
+[1] "logical"
+> v=2.35
+> class(v)
+[1] "numeric"
+> q=1.5
+> q
+[1] 1.5
+> q=1:5
+> q
+[1] 1 2 3 4 5
+> class(q)
+[1] "integer"
+> r=2R
+Error: unexpected symbol in "r=2R"
+> r=2L
+> class(r)
+[1] "integer"
+> b=3+7i
+> class(b)
+[1] "complex"
+> k="hai guys"
+> k
+[1] "hai guys"
+> class(k)
+[1] "character"
+> v=c(2,3,5)
+> v
+[1] 2 3 5
+> v=c("aku", "happy", "sekali") 
+> v
+[1] "aku"    "happy"  "sekali"
+> class(v)
+[1] "character"
+> length(v)
+[1] 3
+> y=5:-5
+> v
+[1] "aku"    "happy"  "sekali"
+> y
+ [1]  5  4  3  2  1  0 -1 -2 -3 -4 -5
+> p=c(1+7)
+> p
+[1] 8
+> p=c(1:7)
+> p
+[1] 1 2 3 4 5 6 7
+> p=c(5:2)
+> p
+[1] 5 4 3 2
+> q=c(-5:5)
+> q
+ [1] -5 -4 -3 -2 -1  0  1  2  3  4  5
+> h=seq(1, 2, by=0.2)
+> h
+[1] 1.0 1.2 1.4 1.6 1.8 2.0
+> j=seq(1, 5, length.out=4)
+> j
+[1] 1.000000 2.333333 3.666667 5.000000
+> x=c(5,6,9,10,13)
+> x
+[1]  5  6  9 10 13
+> x=[4]
+Error: unexpected '[' in "x=["
+> x[4]
+[1] 10
+> x[-4]
+[1]  5  6  9 13
+> x[c(1,3)]
+[1] 5 9
+> x[c(-1,-3)]
+[1]  6 10 13
+> x[1:3]
+[1] 5 6 9
+> x[-1:-3]
+[1] 10 13
+> x[c(TRUE, FALSE, FALSE, TRUE, FALSE)]
+[1]  5 10
+> x[c(FALSE, TRUE, TRUE, FALSE, TRUE)]
+[1]  6  9 13
+> x[c(TRUE, TRUE, FALSE, FALSE, TRUE)]
+[1]  5  6 13
+> x=c(-2, -1, 0, 1, 2)
+> x
+[1] -2 -1  0  1  2
+> x[2]=0
+> x
+[1] -2  0  0  1  2
+> x[x<0]=5
+> x
+[1] 5 0 0 1 2
+> x[2]=7
+> x
+[1] 5 7 0 1 2
+> x[3]=7
+> x
+[1] 5 7 7 1 2
+> x[2][3]=2
+Warning message:
+In x[2][3] = 2 :
+  number of items to replace is not a multiple of replacement length
+> x[2, 3]=2
+Error in x[2, 3] = 2 : incorrect number of subscripts on matrix
+> x[2:3]=2
+> x
+[1] 5 2 2 1 2
+> x[2:3]=7
+> x
+[1] 5 7 7 1 2
+> x=c(-2,-1,0,1,2); y=c(1,3,5,7,9)
+> a=x+y
+> a
+[1] -1  2  5  8 11
+> x=c(-2,-1,0,1,2); y=c(1,3,5,7,9)
+> a=x-y
+> a
+[1] -3 -4 -5 -6 -7
+> x=c(-2,-1,0,1,2); y=c(1,3,5,7,9)
+> b=x-y
+> b
+[1] -3 -4 -5 -6 -7
+> x=c(-2,-1,0,1,2); y=c(1,3,5,7,9)
+> d=x.y
+Error: object 'x.y' not found
+> x=c(-2,-1,0,1,2); y=c(1,3,5,7,9)
+> d=x*y
+> d
+[1] -2 -3  0  7 18
+> x=c(-2,-1,0,1,2); y=c(1,3,5,7,9)
+> e=x/y
+> e
+[1] -2.0000000 -0.3333333  0.0000000  0.1428571  0.2222222
+> x=c(-2,4,0,1,2,5,7,9); y=c(1,2)
+> a=x+y
+> a
+[1] -1  6  1  3  3  7  8 11
+> x=c(-2,4,0,1,2,5,7,9); y=c(1,2)
+> b=x-y
+> b
+[1] -3  2 -1 -1  1  3  6  7
+> x=c(-2,4,0,1,2,5,7,9); y=c(1,2)
+> d=x*y
+> d
+[1] -2  8  0  2  2 10  7 18
+> x=c(-2,4,0,1,2,5,7,9); y=c(1,2)
+> e
+[1] -2.0000000 -0.3333333  0.0000000  0.1428571  0.2222222
+> x=c(-2,4,0,1,2,5,7,9); y=c(1,2)
+> e=x/y
+> e
+[1] -2.0  2.0  0.0  0.5  2.0  2.5  7.0  4.5
+> x=c(-2,4,0,1,2,5,7,9); y=c(1,2)
+> seq=x[x<7]
+> print(seq)
+[1] -2  4  0  1  2  5
+> x=c(-2,4,0,1,2,5,7,9); y=c(1,2)
+> seq=c(length(x<3), length(x>5))
+> print(seq)
+[1] 8 8
+> x=c(-2,4,0,1,2,5,7,9); y=c(1,2)
+> seq=c(x(x<3), x(x>5))
+Error in x(x < 3) : could not find function "x"
+> x=c(-2,4,0,1,2,5,7,9); y=c(1,2)
+> seq=c(x[x<3 | x>5])
+> print(seq)
+[1] -2  0  1  2  7  9
+> N=matriks(1:9, nrow=3, ncol=3, byrow=TRUE)
+Error in matriks(1:9, nrow = 3, ncol = 3, byrow = TRUE) : 
+  could not find function "matriks"
+> N=matrix(1:9, nrow=3, ncol=3, byrow=TRUE)
+> N
+     [,1] [,2] [,3]
+[1,]    1    2    3
+[2,]    4    5    6
+[3,]    7    8    9
+> N=matrix(1:9, nrow=3, ncol=3)
+> N
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+> 
+> K=matrix(c(1,3,5,7,9,11), nrow=2, ncol=3)
+> K
+     [,1] [,2] [,3]
+[1,]    1    5    9
+[2,]    3    7   11
+> P=c(1,3,5,7,9,11)
+> K=matrix(P, nrow=2, ncol=3)
+> K
+     [,1] [,2] [,3]
+[1,]    1    5    9
+[2,]    3    7   11
+> N=matrix(1:9, nrow=3, ncol=3, dimnames=list(c("X", "Y", "Z"), c("A", "B", "C")))
+> N
+  A B C
+X 1 4 7
+Y 2 5 8
+Z 3 6 9
+> A=cbind(c(1,2,3),c(4,5,6))
+> B=rbind(c(1,2,3),c(4,5,6))
+> A
+     [,1] [,2]
+[1,]    1    4
+[2,]    2    5
+[3,]    3    6
+> B
+     [,1] [,2] [,3]
+[1,]    1    2    3
+[2,]    4    5    6
+> x=matrix(1:9, nrow=3, ncol=3)
+> x
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+> x[2,3]
+[1] 8
+> x[2,]
+[1] 2 5 8
+> x[,3]
+[1] 7 8 9
+> x[c(1,2),c(1,3)]
+     [,1] [,2]
+[1,]    1    7
+[2,]    2    8
+> x[c(3,2),]
+     [,1] [,2] [,3]
+[1,]    3    6    9
+[2,]    2    5    8
+> x[-2,]
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    3    6    9
+> x[,-3]
+     [,1] [,2]
+[1,]    1    4
+[2,]    2    5
+[3,]    3    6
+> x
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+> x(2,2)=10
+Error in x(2, 2) = 10 : 
+  target of assignment expands to non-language object
+> x[2,2]=10
+> x
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2   10    8
+[3,]    3    6    9
+> x[x<5]=0
+> x
+     [,1] [,2] [,3]
+[1,]    0    0    7
+[2,]    0   10    8
+[3,]    0    6    9
+> m1=matrix(1:10, nrow=2)
+> m2=matrix(seq(5.5,10,by=0.5),nrow=2)
+> m1
+     [,1] [,2] [,3] [,4] [,5]
+[1,]    1    3    5    7    9
+[2,]    2    4    6    8   10
+> m2
+     [,1] [,2] [,3] [,4] [,5]
+[1,]  5.5  6.5  7.5  8.5  9.5
+[2,]  6.0  7.0  8.0  9.0 10.0
+> m1+m2
+     [,1] [,2] [,3] [,4] [,5]
+[1,]  6.5  9.5 12.5 15.5 18.5
+[2,]  8.0 11.0 14.0 17.0 20.0
+> m1-m2
+     [,1] [,2] [,3] [,4] [,5]
+[1,] -4.5 -3.5 -2.5 -1.5 -0.5
+[2,] -4.0 -3.0 -2.0 -1.0  0.0
+> m1*m2
+     [,1] [,2] [,3] [,4]  [,5]
+[1,]  5.5 19.5 37.5 59.5  85.5
+[2,] 12.0 28.0 48.0 72.0 100.0
+> m1%*%m2
+Error in m1 %*% m2 : non-conformable arguments
+> m1%*%t(m2)
+      [,1] [,2]
+[1,] 207.5  220
+[2,] 245.0  260
+> m1/m2
+          [,1]      [,2]      [,3]      [,4]      [,5]
+[1,] 0.1818182 0.4615385 0.6666667 0.8235294 0.9473684
+[2,] 0.3333333 0.5714286 0.7500000 0.8888889 1.0000000
+> save.image("C:\\Users\\user\\OneDrive\\文档\\latihan r\\latian r")
+> 
