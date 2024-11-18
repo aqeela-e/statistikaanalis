@@ -1,0 +1,83 @@
+R version 4.4.2 (2024-10-31 ucrt) -- "Pile of Leaves"
+Copyright (C) 2024 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Workspace loaded from ~/.RData]
+
+> library(readxl)
+> dataansis <- read_excel("dataansis.xlsx")
+> View(dataansis)
+> x=rnorm(10,5,1)
+> datanorm=data.frame(x)
+> data norm
+Error: unexpected symbol in "data norm"
+> x=rnorm(10,5,1)
+> datanorm=data.frame(x)
+> datanorm
+          x
+1  6.645183
+2  5.265514
+3  4.004938
+4  4.857774
+5  4.371821
+6  5.830269
+7  4.693143
+8  2.856682
+9  5.034555
+10 4.861602
+> write.table(datanorm, "C:/Users/user/OneDrive/文档/latans/datanorm.csv",sep=";")
+> barplot(x,xlab,ylab,main,names.arg,col)
+Error: object 'ylab' not found
+> pendapatan<-c(2,1,3,2,3,2)
+> nama<-c("Aad","Dira","Lida","Tri","Vida","Fadu")
+> barplot(pendapatan,names.arg =nama,xlab="nama",ylab ="pendapatan",col="blue",main="diagram pendapatan")
+> barplot(pendapatan,names.arg =nama,xlab="nama",ylab ="pendapatan",col="red",main="diagram pendapatan")
+> barplot(pendapatan,names.arg =nama,xlab="nama",ylab ="pendapatan",col="red","blue",main="diagram pendapatan")
+Error in width/2 : non-numeric argument to binary operator
+In addition: Warning message:
+In mean.default(width) : argument is not numeric or logical: returning NA
+> barplot(pendapatan,names.arg =nama,xlab="nama",ylab ="pendapatan",col="purple",main="diagram pendapatan")
+> barplot(pendapatan,names.arg =nama,xlab="nama",ylab ="pendapatan",col="purple",main="diagram pendapatan",horiz=TRUE)
+> barplot(pendapatan,names.arg =nama,xlab="nama",ylab ="pendapatan",col="red",main="diagram pendapatan",horiz=TRUE)
+> table(pendapatan)
+pendapatan
+1 2 3 
+1 3 2 
+> barplot(table(pendapatan),xlab="nama",ylab="pendapatan",border="black",col ="blue",main="diagram pendapatan")
+> #input data
+> warna<-c("yellow","green")
+> nama<-c("aad","dira")
+> bulan<-c("Jan","Feb","Mar","April","Mei")
+> pendapatan<-matrix(c(15,19,16,28,24,18,23,8,25,19),nrow=2,ncol=5,byrow=TRUE)
+> #diagram batang
+> barplot(pendapatan,main="pendapatan alumni STT",xlab="bulan",ylab="pendapatan",col =warna,names.arg = bulan)
+> #keterangan pada plot legend("topleft",nama,cex=1.3,fill=warna)
+> #keterangan pada plot 
+> legend("topleft",nama,cex=1.3,fill=warna)
+> warna<-c("black","pink")
+> x<-c(30,25,55) 
+> label<-c("PNS","pengusaha","lainnya")
+> #persentasi data
+> pie.persen<-around(100*x/sum(x),1)
+Error in around(100 * x/sum(x), 1) : could not find function "around"
+> pie.persen<-round(100*x/sum(x),1)
+> #penggabungan label
+> pielabel<-paste(pie.persen,"%",sep="")
+> pie(x,labels=pielabel,main="pie profesi alumni",col=rainbow(length(x)))
+> #menambahkan legenda
+> legend("topright",label,cex=0.6,fill=rainbow(length(x)))
+> 
